@@ -52,13 +52,5 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         notificationManager.notify(notificationId, builder.build());
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    private void createNotificationChannel() {
-        String channelId = getString(R.string.default_notification_channel_id);
-        String channelName = getString(R.string.default_notification_channel_name);
-        int importance = NotificationManager.IMPORTANCE_DEFAULT;
-        NotificationChannel channel = new NotificationChannel(channelId, channelName, importance);
-        NotificationManager notificationManager = getSystemService(NotificationManager.class);
-        notificationManager.createNotificationChannel(channel);
-    }
+
 }
