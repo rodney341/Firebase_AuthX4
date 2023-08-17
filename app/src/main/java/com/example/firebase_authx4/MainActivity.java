@@ -1,18 +1,23 @@
 package com.example.firebase_authx4;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final String TAG = "MainActivity";
     FirebaseAuth auth;
     Button button;
     TextView textView;
@@ -45,9 +50,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        String token2 = returnMeFCMtoken();
+        Log.d(TAG,"hola"+token2);
 
+    }
 
+    public static String returnMeFCMtoken() {
+        final String[] token = {""};
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+            @Override
+            public void onComplete(@NonNull Task<String> task) {
+                if(task.isComplete()){
+                    token[0] = task.getResult();
+                    Log.e(TAG, "onComplete: new Token got: "+token[0] );
 
-
+                }
+            }
+        });
+        return token[0];
     }
 }

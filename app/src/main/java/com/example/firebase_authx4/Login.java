@@ -19,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class Login extends AppCompatActivity {
 
@@ -50,11 +51,11 @@ public class Login extends AppCompatActivity {
         buttonLogin=findViewById(R.id.btn_login);
         progressBar=findViewById(R.id.progressBar);
         textView=findViewById(R.id.registerNow);
-/*
+
         String token = String.valueOf(FirebaseMessaging.getInstance().getToken());
         Log.d("token",token);
 
- */
+
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,8 +103,6 @@ public class Login extends AppCompatActivity {
                                 }
                             }
                         });
-
-
 
             }
         });

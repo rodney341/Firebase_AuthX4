@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "329944857748",
+    "project_id": "login-register-firebasex4",
+    "storage_bucket": "login-register-firebasex4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329944857748:android:8e7a59f8eef3829f3c8881",
+        "android_client_info": {
+          "package_name": "com.example.firebase_authx4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329944857748-toqo5hrh1qk7580inhgub9534n0590gm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvUX8oTqNUYmg0axHj6BZDU25PwyRPQwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329944857748-toqo5hrh1qk7580inhgub9534n0590gm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
